@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınav Sonucu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sınav Sonucu</h1>
+        <div class="result">
+            <p>Puan: {{ score }}%</p>
+            <p>Doğru Cevap Sayısı: {{ correct_answers }}</p>
+            <p>Yanlış Cevap Sayısı: {{ wrong_answers }}</p>
+            <p>Toplam Soru Sayısı: {{ total_questions }}</p>
+            <p>En Yüksek Puan: {{ high_score }}%</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="quiz-link">Yeniden Başla</a>
+    </div>
+    <footer>
+        <p>&copy 2024 by Noah</p>
+    </footer>
+</body>
+</html>
